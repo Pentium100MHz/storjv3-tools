@@ -2,7 +2,8 @@
 //Storj v3 concurrent connection and service time monitoring script (cacti version), by Pentium100.
 error_reporting(0);
 $log=array();
-exec("/usr/bin/docker logs storagenode  --since 2m 2>&1 | sed 's/\x1b\[[0-9;]*m//g'",$log);
+//if needed, use absolute path
+exec("docker logs storagenode  --since 2m 2>&1 | sed 's/\x1b\[[0-9;]*m//g'",$log);
 
 
 $pieces=array();

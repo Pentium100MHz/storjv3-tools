@@ -52,14 +52,14 @@ foreach ($log as $line) {
                                         $pieces[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]--;
                                         $requestsup--;
                                         $requests--;
-                                $endtime=date_format(date_create_from_format('Y-m-d?H:i:s.uT',$parts[0]),"U.u");
-                                $duration=$endtime-$times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0];
-                                unset($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0]);
-                                $times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]=array_values($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]);
-                                $req_up++;
-                                $time_up+=$duration;
-                                $req_total++;
-                                $time_total+=$duration;
+                                        $endtime=date_format(date_create_from_format('Y-m-d?H:i:s.uT',$parts[0]),"U.u");
+                                        $duration=$endtime-$times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0];
+                                        unset($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0]);
+                                        $times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]=array_values($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]);
+                                        $req_up++;
+                                        $time_up+=$duration;
+                                        $req_total++;
+                                        $time_total+=$duration;
                                 }
                         }
                         break;
@@ -70,14 +70,14 @@ foreach ($log as $line) {
                                         $pieces[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]--;
                                         $requestsdown--;
                                         $requests--;
-                                $endtime=date_format(date_create_from_format('Y-m-d?H:i:s.uT',$parts[0]),"U.u");
-                                $duration=$endtime-$times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0];
-                                unset($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0]);
-                                $times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]=array_values($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]);
-                                $req_down++;
-                                $time_down+=$duration;
-                                $req_total++;
-                                $time_total+=$duration;
+                                        $endtime=date_format(date_create_from_format('Y-m-d?H:i:s.uT',$parts[0]),"U.u");
+                                        $duration=$endtime-$times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0];
+                                        unset($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]][0]);
+                                        $times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]=array_values($times[$json["SatelliteID"]][$json["Piece ID"]][$json["Action"]]);
+                                        $req_down++;
+                                        $time_down+=$duration;
+                                        $req_total++;
+                                        $time_total+=$duration;
                                 }
                         }
                         break;

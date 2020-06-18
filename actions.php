@@ -15,7 +15,7 @@ foreach ($op as $line) {
 	$parts=explode("\t",$line);
 	$origin=$parts[2];
 	$severity = preg_replace('/\e[[][A-Za-z0-9];?[0-9]*m?/', '', $parts[1]); //remove terminal color codes
-	if (($severity=="INFO") && ($origin == "piecestore")) {
+	if (($severity=="INFO") && (($origin == "piecestore") || ($origin == "piecedeleter")) ) {
 		$result=str_replace(" ","_",$parts[3]);
 		$json=json_decode($parts[4],1);
 		if ($json) {

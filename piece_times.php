@@ -3,7 +3,7 @@
 
 function formatDate($timestamp) {
 //produces date in a format that Storj v3 node uses in its logs
-return sprintf("%s.%dZ", gmdate('Y-m-d\TH:i:s',$timestamp), ($timestamp-floor($timestamp))*1000);
+return sprintf("%s.%03dZ", gmdate('Y-m-d\TH:i:s',$timestamp), ($timestamp-floor($timestamp))*1000);
 }
 
 $log=array();

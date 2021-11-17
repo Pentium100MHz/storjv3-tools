@@ -53,5 +53,5 @@ foreach ($log as $line) {
         } //if
 } //foreach
 
-printf("Slowest: satellite: %s, piece: %s, time: %.3f start: %s, end: %s\n", $max_piece["Satellite ID"], $max_piece["Piece ID"], $max, formatDate($max_start),formatDate($max_end));
-printf("Fastest: satellite: %s, piece: %s, time: %.3f start: %s, end: %s\n", $min_piece["Satellite ID"], $min_piece["Piece ID"], $min, formatDate($min_start),formatDate($min_end));
+printf("Slowest: satellite: %s, piece: %s, time: %.3f, start: %s, end: %s\n", $max_piece["Satellite ID"], $max_piece["Piece ID"], $max, formatDate($max_start),formatDate($max_end));
+printf("Fastest: satellite: %s, piece: %s, time: %.3f, start: %s, end: %s\n", $min_piece["Satellite ID"], $min_piece["Piece ID"], $min, formatDate($min_start),formatDate($min_end));
